@@ -6,3 +6,7 @@ let receiveTodos = (todos) => ({
   todos
 });
 
+let receiveTodo = todo => ({
+  type: RECEIVE_TODO,
+  todo
+});
