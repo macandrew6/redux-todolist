@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.apple = apple;
 
   ReactDOM.render(
-    <h1>why isn't this changing</h1>,
+    <h1>a new thing</h1>,
     document.getElementById('content')
   );
 });
