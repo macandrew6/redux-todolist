@@ -1,5 +1,3 @@
 export const allTodos = (state) => {
-  return Object.keys(state.todos).map(key => {
-    return state.todos[key]; 
-  });
+  return Object.values(state.todos);
 };
