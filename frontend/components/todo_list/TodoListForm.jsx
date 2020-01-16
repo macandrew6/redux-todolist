@@ -25,7 +25,7 @@ class TodoListForm extends React.Component {
     e.preventDefault();
     console.log(uniqueId());
     const todo = Object.assign({}, this.state, {id: uniqueId()});
-    this.props.receiveTodo(this.state);
+    this.props.receiveTodo(todo);
   }
 
   render() {
