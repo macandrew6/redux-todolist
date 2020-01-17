@@ -1,12 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import TodoDetailsViewContainer from './TodoDetailViewContainer';
+import TodoDetailViewContainer from './TodoDetailViewContainer';
 
 export default class TodoListItem extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { // for update todo fn
-      
+    this.state = { 
+      detail: false
     };
+  }
+
+  toggleDetails() {
+    this.setState({
+      detail: !this.state.detail
+    });
   }
 
   toggleTodo() {
@@ -16,14 +24,11 @@ export default class TodoListItem extends Component {
   }
 
   render() {
-    const { todo, removeTodo } = this.props;
-    console.log(todo);
+    const { todo } = this.props;
     return (
       <div>
-        <li>{todo.title}</li>
-        <button onClick={() => removeTodo(todo)}>
-          Delete
-        </button>
+        <li onClick={() => this.toggleDetails()}>{todo.title}</li>
+        {this.state.detail ? '' : <TodoDetailViewContainer />}
         <button onClick={() => this.toggleTodo()}>
           { todo.done === true ? "Undo" : "Done"}
         </button>
