@@ -28,7 +28,7 @@ export default class TodoListItem extends Component {
     return (
       <div>
         <li onClick={() => this.toggleDetails()}>{todo.title}</li>
-        {this.state.detail ? '' : <TodoDetailViewContainer />}
+        {this.state.detail ? <TodoDetailViewContainer /> : null}
         <button onClick={() => this.toggleTodo()}>
           { todo.done === true ? "Undo" : "Done"}
         </button>
