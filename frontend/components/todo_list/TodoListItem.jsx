@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TodoDetailsViewContainer from './TodoDetailViewContainer';
 import TodoDetailViewContainer from './TodoDetailViewContainer';
 
 export default class TodoListItem extends Component {
@@ -28,7 +27,7 @@ export default class TodoListItem extends Component {
     return (
       <div>
         <li onClick={() => this.toggleDetails()}>{todo.title}</li>
-        {this.state.detail ? <TodoDetailViewContainer /> : null}
+        {this.state.detail ? <TodoDetailViewContainer todo={todo}/> : null}
         <button onClick={() => this.toggleTodo()}>
           { todo.done === true ? "Undo" : "Done"}
         </button>

@@ -1,0 +1,4 @@
+export const RECEIVESTEPS = 'RECEIVESTEPS';
+export const RECEIVESTEP = 'RECEIVESTEP';
+export const REMOVESTEP = 'REMOVESTEP';
+

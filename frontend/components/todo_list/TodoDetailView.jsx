@@ -1,9 +1,10 @@
 import React from 'react';
 
-const TodoDetailView = ({ removeTodo }) => {
+const TodoDetailView = ({ todo, removeTodo }) => {
   return (
     <div>
-      hello
+      {todo.body}
+
     </div>
   );
 };
