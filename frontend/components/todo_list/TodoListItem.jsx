@@ -5,18 +5,28 @@ export default class TodoListItem extends Component {
     super(props);
 
     this.state = { // for update todo fn
-
+      
     };
   }
 
+  toggleTodo() {
+    const { todo, receiveTodo } = this.props;
+    let toggledTodo = Object.assign({}, todo, { done: !todo.done });
+    receiveTodo(toggledTodo);
+  }
+
   render() {
-    const { todo, removeTodo, receiveTodo } = this.props;
+    const { todo, removeTodo } = this.props;
     console.log(todo);
     return (
       <div>
         <li>{todo.title}</li>
-        <button onClick={() => removeTodo(todo)}>Delete</button>
-        <button onClick={() => receiveTodo(Object.assign({}, todo, { done: !todo.done }))}>{ todo.done === true ? "Undo" : "Done"}</button>
+        <button onClick={() => removeTodo(todo)}>
+          Delete
+        </button>
+        <button onClick={() => this.toggleTodo()}>
+          { todo.done === true ? "Undo" : "Done"}
+        </button>
       </div>
     )
   }
