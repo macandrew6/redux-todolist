@@ -6,6 +6,8 @@ const StepList = () => {
   return (
     <ul> 
       <StepListItemContainer />
+      <StepListItemContainer />
+      <StepListItemContainer />
     </ul>
   );
 };
