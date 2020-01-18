@@ -3,5 +3,5 @@ export const allTodos = (state) => {
 };
 
 export const stepsByTodoId = (state, todoId) => {
-  return Object.values(state.steps).filter(todo => todo.id === todoId);
+  return Object.values(state.steps).filter(step => step.todo_id === todoId);
 };
