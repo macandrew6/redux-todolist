@@ -1,11 +1,13 @@
-// import React from 'react';
+import React from 'react';
+import StepListItemContainer from './StepListItemContainer';
 
-// const StepList = () => {
-//   return (
-//     <div> 
-//       StepList
-//     </div>
-//   );
-// };
 
-// export default StepList;
+const StepList = () => {
+  return (
+    <ul> 
+      <StepListItemContainer />
+    </ul>
+  );
+};
+
+export default StepList;
