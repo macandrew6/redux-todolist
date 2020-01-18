@@ -1,18 +1,18 @@
-export const RECEIVESTEPS = 'RECEIVESTEPS';
-export const RECEIVESTEP = 'RECEIVESTEP';
-export const REMOVESTEP = 'REMOVESTEP';
+export const RECEIVE_STEPS = 'RECEIVE_STEPS';
+export const RECEIVE_STEP = 'RECEIVE_STEP';
+export const REMOVE_STEP = 'REMOVE_STEP';
 
 export const receiveSteps = steps => ({
-  type: RECEIVESTEPS,
+  type: RECEIVE_STEPS,
   steps
 });
 
 export const receiveStep = step => ({
-  type: RECEIVESTEP,
+  type: RECEIVE_STEP,
   step
 });
 
 export const removeStep = step => ({
-  type: REMOVESTEP,
+  type: REMOVE_STEP,
   step
 });
