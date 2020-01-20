@@ -5,17 +5,42 @@ class StepForm extends React.Component {
     super(props);
 
     this.state = {
-      stepTitle: '',
-      stepBody: ''
+      title: '',
+      body: ''
     };
+  }
+
+  update(field) {
+    return e => {
+      this.setState({
+        [field]: e.target.value
+      });
+    };
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    
   }
 
   render() {
     return (
       <div>
-        <form>
-          <label htmlFor="step-input">Step</label>
-          <input type="text" placeholder="Type Step Here" />
+        <form onSubmit={e => this.handleSubmit(e)}>
+          <label htmlFor="step-title">Title</label>
+          <input 
+            type="text" 
+            placeholder="Type Step Here" 
+            onChange={() => this.update('title')}
+            value={this.state.title}
+          />
+          <label htmlFor="step-body">Body</label>
+          <input 
+            type="text" 
+            placeholder="Type Step Here" 
+            onChange={() => this.update('body')}
+            value={this.state.body}
+          />
           <button type="submit">Add Step</button>
         </form>
       </div>
