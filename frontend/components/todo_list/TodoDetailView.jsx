@@ -5,7 +5,7 @@ const TodoDetailView = ({ todo, removeTodo }) => {
   return (
     <div>
       {todo.body}
-      <StepListContainer />
+      <StepListContainer todoId={todo.id}/>
     </div>
   );
 };

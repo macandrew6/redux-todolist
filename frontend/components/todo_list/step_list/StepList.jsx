@@ -1,12 +1,13 @@
 import React from 'react';
 import StepListItemContainer from './StepListItemContainer';
 
-const StepList = () => {
+const StepList = ({ steps }) => {
+  console.log(steps);
   return (
     <ul> 
-      <StepListItemContainer />
-      <StepListItemContainer />
-      <StepListItemContainer />
+      {steps.map(step => (
+        <StepListItemContainer step={step}/>
+      ))}
     </ul>
   );
 };

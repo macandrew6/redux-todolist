@@ -4,7 +4,8 @@ class StepListItem extends Component {
   render() {
     return (
       <div>
-        StepList Item
+        StepList Item Title
+        StepList Item Body
       </div>
     );
   }
