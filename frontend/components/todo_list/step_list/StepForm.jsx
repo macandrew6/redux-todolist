@@ -20,7 +20,9 @@ class StepForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+    // Create a local step object
+    // Pass that object to this.props.receiveStep
+    // Clear the form fields.
   }
 
   render() {
