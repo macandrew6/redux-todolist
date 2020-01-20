@@ -4,7 +4,7 @@ import {
   REMOVE_STEP 
 } from '../actions/step_actions';
 
-const stepsReducer = (state={}, action) => {
+const stepsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     // case RECEIVE_STEPS:
