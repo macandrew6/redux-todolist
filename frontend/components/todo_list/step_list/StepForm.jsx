@@ -7,6 +7,7 @@ class StepForm extends React.Component {
     this.state = {
       title: '',
       body: ''
+      // todoId:
     };
   }
 
@@ -21,8 +22,14 @@ class StepForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     // Create a local step object
+    let step = Object.assign({}, this.state, ) // needs current todo's id
+
     // Pass that object to this.props.receiveStep
     // Clear the form fields.
+    this.setState({
+      title: '',
+      body: ''
+    })
   }
 
   render() {
