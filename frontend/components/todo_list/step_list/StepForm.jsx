@@ -22,34 +22,37 @@ class StepForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     // Create a local step object
-    let step = Object.assign({}, this.state, ) // needs current todo's id
+    let step = Object.assign({}, this.state) // needs current todo's id
 
     // Pass that object to this.props.receiveStep
     // Clear the form fields.
     this.setState({
       title: '',
       body: ''
-    })
+    });
   }
 
   render() {
+    console.log("this is the step title ",this.state.title);
     return (
       <div>
         <form onSubmit={e => this.handleSubmit(e)}>
-          <label htmlFor="step-title">Title</label>
+          <label htmlFor="step-title">Title:</label>
           <input 
             type="text" 
-            placeholder="Type Step Here" 
-            onChange={() => this.update('title')}
+            placeholder="Type Step Title Here..." 
             value={this.state.title}
+            onChange={this.update('title')}
           />
-          <label htmlFor="step-body">Body</label>
+          <br/>
+          <label htmlFor="step-body">Body:</label>
           <input 
             type="text" 
-            placeholder="Type Step Here" 
-            onChange={() => this.update('body')}
+            placeholder="Type Step Body Here..." 
             value={this.state.body}
+            onChange={this.update('body')}
           />
+          <br/>
           <button type="submit">Add Step</button>
         </form>
       </div>
