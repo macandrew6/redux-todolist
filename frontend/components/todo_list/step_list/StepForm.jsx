@@ -4,7 +4,7 @@ class StepForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.state = { // place where step text must got and changed
 
     };
   }
