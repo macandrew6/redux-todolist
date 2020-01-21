@@ -1,13 +1,12 @@
 import React from 'react';
 import StepListContainer from './step_list/StepListContainer';
-import StepForm from './step_list/StepForm';
 
 const TodoDetailView = ({ todo, removeTodo }) => {
+  console.log(todo.id);
   return (
     <div>
       {todo.body}
       <StepListContainer todoId={todo.id}/>
-      <StepForm />
     </div>
   );
 };

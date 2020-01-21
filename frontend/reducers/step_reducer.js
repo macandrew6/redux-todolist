@@ -8,7 +8,12 @@ const stepsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     // case RECEIVE_STEPS:
-    // case RECEIVE_STEP:
+    case RECEIVE_STEP:
+      return Object.assign(
+        {}, 
+        state, 
+        {[action.step.id]: action.step}
+      );
     // case REMOVE_STEPS:
       
     default:

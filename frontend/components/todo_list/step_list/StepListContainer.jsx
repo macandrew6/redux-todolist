@@ -3,8 +3,9 @@ import StepList from './StepList';
 import { receiveSteps } from '../../../actions/step_actions';
 import { stepsByTodoId } from '../../../reducers/selectors';
 
-const mapStateToProps = (state, todoId) => ({
-  steps: stepsByTodoId(state, todoId)
+const mapStateToProps = (state, { todoId }) => ({
+  steps: stepsByTodoId(state, todoId),
+  todoId
 });
 
 const mapDispatchToProps = (dispatch) => ({

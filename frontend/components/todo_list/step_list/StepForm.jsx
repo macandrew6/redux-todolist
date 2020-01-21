@@ -1,4 +1,5 @@
 import React from 'react';
+import { uniqueId } from '../../../util/idGenerator';
 
 class StepForm extends React.Component {
   constructor(props) {
@@ -6,9 +7,11 @@ class StepForm extends React.Component {
 
     this.state = {
       title: '',
-      body: ''
-      // todoId:
+      body: '',
+      todoId: this.props.todoId
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
@@ -21,11 +24,11 @@ class StepForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // Create a local step object
-    let step = Object.assign({}, this.state) // needs current todo's id
+    console.log(this.state);
+    let step = Object.assign({}, this.state, {id: uniqueId()});
+    console.log(step);
 
-    // Pass that object to this.props.receiveStep
-    // Clear the form fields.
+    this.props.receiveStep(step);
     this.setState({
       title: '',
       body: ''
@@ -33,10 +36,10 @@ class StepForm extends React.Component {
   }
 
   render() {
-    console.log("this is the step title ",this.state.title);
+    console.log('this is the props ',this.props);
     return (
       <div>
-        <form onSubmit={e => this.handleSubmit(e)}>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="step-title">Title:</label>
           <input 
             type="text" 
