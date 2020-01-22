@@ -6,9 +6,11 @@ class StepListItem extends Component {
   }
   
   render() {
+    const { step } = this.props;
     return (
-      <div>
-
+      <div className="step-container">
+        <div>{step.title}</div>
+        <div>{step.body}</div>
       </div>
     );
   }

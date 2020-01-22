@@ -7,7 +7,8 @@ class StepForm extends React.Component {
 
     this.state = {
       title: '',
-      body: '',
+      description: '',
+      done: false,
       todoId: this.props.todoId
     };
 
@@ -28,7 +29,7 @@ class StepForm extends React.Component {
     this.props.receiveStep(step);
     this.setState({
       title: '',
-      body: ''
+      description: ''
     });
   }
 
@@ -44,12 +45,12 @@ class StepForm extends React.Component {
             onChange={this.update('title')}
           />
           <br/>
-          <label htmlFor="step-body">Body:</label>
+          <label htmlFor="step-description">Description:</label>
           <input 
             type="text" 
-            placeholder="Type Step Body Here..." 
-            value={this.state.body}
-            onChange={this.update('body')}
+            placeholder="Type Step Description Here..." 
+            value={this.state.description}
+            onChange={this.update('description')}
           />
           <br/>
           <button type="submit">Add Step</button>
