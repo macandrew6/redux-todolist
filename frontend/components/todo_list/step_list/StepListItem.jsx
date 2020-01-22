@@ -6,10 +6,9 @@ class StepListItem extends Component {
   }
   
   render() {
-    console.log(this.props.step);
     return (
       <div>
-        
+
       </div>
     );
   }
