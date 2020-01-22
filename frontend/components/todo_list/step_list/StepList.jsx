@@ -3,6 +3,7 @@ import StepListItemContainer from './StepListItemContainer';
 import StepForm from './StepForm';
 
 const StepList = ({ steps, todoId, receiveStep }) => {
+  console.log(steps);
   return (
     <div>
       <ul> 
