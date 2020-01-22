@@ -25,7 +25,6 @@ class StepForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let step = Object.assign({}, this.state, {id: uniqueId()});
-    console.log(step);
 
     this.props.receiveStep(step);
     this.setState({
@@ -35,7 +34,6 @@ class StepForm extends React.Component {
   }
 
   render() {
-    console.log('this is the props ',this.props);
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
