@@ -6,7 +6,7 @@ export default (props) => {
   console.log(props.todos);
   return (
     <div>
-      <ul>
+      <ul className="todo-list">
         {props.todos.map((todo, key) =>(
           <TodoListItem 
             key={key} 
