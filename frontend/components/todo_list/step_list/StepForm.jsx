@@ -24,7 +24,6 @@ class StepForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     let step = Object.assign({}, this.state, {id: uniqueId()});
     console.log(step);
 
