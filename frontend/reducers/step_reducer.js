@@ -6,6 +6,7 @@ import {
 
 const stepsReducer = (state = {}, action) => {
   Object.freeze(state);
+  let newState = {};
   switch(action.type) {
     case RECEIVE_STEPS:
       return Object.assign(
@@ -19,8 +20,10 @@ const stepsReducer = (state = {}, action) => {
         state, 
         {[action.step.id]: action.step}
       );
-    // case REMOVE_STEPS:
-      
+    case REMOVE_STEP:
+      newState = Object.assign({}, state);
+      delete newState[action.step.id];
+      return newState;
     default:
       return state;
   }
