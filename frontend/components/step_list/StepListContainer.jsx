@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import StepList from './StepList';
-import { receiveStep } from '../../../actions/step_actions';
-import { stepsByTodoId } from '../../../reducers/selectors';
+import { receiveStep } from '../../actions/step_actions';
+import { stepsByTodoId } from '../../reducers/selectors';
 
 const mapStateToProps = (state, { todoId }) => ({
   steps: stepsByTodoId(state, todoId),

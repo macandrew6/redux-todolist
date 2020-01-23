@@ -1,5 +1,5 @@
 import React from 'react';
-import { uniqueId } from '../../../util/idGenerator';
+import { uniqueId } from '../../util/idGenerator';
 
 class StepForm extends React.Component {
   constructor(props) {

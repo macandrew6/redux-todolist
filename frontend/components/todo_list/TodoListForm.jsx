@@ -41,7 +41,8 @@ class TodoListForm extends React.Component {
           type="text" 
           placeholder="enter todo here"
           value={this.state.title}
-          onChange={this.handleChange('title')}  
+          onChange={this.handleChange('title')} 
+          required 
         />
         <label htmlFor="body">Body</label>
         <input 
@@ -49,6 +50,7 @@ class TodoListForm extends React.Component {
           placeholder="enter todo here"
           value={this.state.body}
           onChange={this.handleChange('body')}  
+          required
         />
         <button type="submit">Add Todo</button>
       </form>

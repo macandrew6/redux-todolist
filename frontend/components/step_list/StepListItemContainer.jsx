@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import StepListItem from './StepListItem';
-import { removeStep, receiveStep } from '../../../actions/step_actions';
+import { removeStep, receiveStep } from '../../actions/step_actions';
 
 
 
