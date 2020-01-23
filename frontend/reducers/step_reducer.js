@@ -9,11 +9,11 @@ const stepsReducer = (state = {}, action) => {
   let newState = {};
   switch(action.type) {
     case RECEIVE_STEPS:
-      return Object.assign(
-        {}, 
-        state, 
-        action.steps
-      );
+      newState = Object.assign({}, state);
+      action.steps.forEach(step => {
+        newState[step.id] = step;
+      });
+      return newState;
     case RECEIVE_STEP:
       return Object.assign(
         {}, 
