@@ -6,6 +6,7 @@ const TodoDetailView = ({ todo, removeTodo }) => {
     <div>
       {todo.body}
       <StepListContainer todoId={todo.id}/>
+      <button onClick={() => removeTodo(todo)}></button>
     </div>
   );
 };

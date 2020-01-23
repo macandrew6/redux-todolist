@@ -5,7 +5,7 @@ import logger from 'redux-logger';
 const configureStore = (preloadedState = {}) => {
   const store = createStore(
     rootReducer,
-    JSON.parse(localStorage.state),
+    preloadedState,
     applyMiddleware(logger)
   );
   store.subscribe(() => {
