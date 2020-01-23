@@ -25,7 +25,7 @@ export default class TodoListItem extends Component {
   render() {
     const { todo } = this.props;
     return (
-      <div>
+      <div className="todo-list-item">
         <li onClick={() => this.toggleDetails()}>{todo.title}</li>
         {this.state.detail ? <TodoDetailViewContainer todo={todo}/> : null}
         <button onClick={() => this.toggleTodo()}>

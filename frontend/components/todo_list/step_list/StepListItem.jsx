@@ -8,9 +8,9 @@ class StepListItem extends Component {
   render() {
     const { step } = this.props;
     return (
-      <div className="step-container">
+      <div className="step-list-item">
         <div>{step.title}</div>
-        <div>{step.body}</div>
+        <div>{step.description}</div>
       </div>
     );
   }

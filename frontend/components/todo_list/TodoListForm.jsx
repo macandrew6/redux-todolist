@@ -34,7 +34,9 @@ class TodoListForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form 
+        className="todo-form"
+        onSubmit={this.handleSubmit}>
         <label htmlFor="title">Title</label>
         <input 
           type="text" 

@@ -13,3 +13,20 @@ button {
 .todo-list {
   border: 1px solid black;
 }
+
+.todo-list-item {
+  border: 1px solid red;
+}
+
+.todo-form {
+  border: 2px solid green;
+}
+
+.step-list-item {
+  border: 1px solid blue;
+}
+
+.step-form {
+  border: 2px solid green;
+}
+
