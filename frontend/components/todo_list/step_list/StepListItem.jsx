@@ -6,11 +6,12 @@ class StepListItem extends Component {
   }
   
   render() {
-    const { step } = this.props;
+    const { step, removeStep } = this.props;
     return (
       <div className="step-list-item">
         <div>{step.title}</div>
         <div>{step.description}</div>
+        <button onClick={() => removeStep(step)}>Delete Step</button>
       </div>
     );
   }
