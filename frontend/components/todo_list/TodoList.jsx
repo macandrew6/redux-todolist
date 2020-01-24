@@ -2,16 +2,14 @@ import React from 'react';
 import TodoListItem from './TodoListItem';
 import TodoListForm from './TodoListForm';
 
-export default (props) => {
-  console.log(props.todos);
+const TodoList = (props) => {
   return (
     <div>
       <ul className="todo-list">
-        {props.todos.map((todo, key) =>(
+        {props.todos.map((todo) =>(
           <TodoListItem 
-            key={key} 
+            key={todo.id}
             todo={todo} 
-            removeTodo={props.removeTodo}
             receiveTodo={props.receiveTodo}/>
         ))}
       </ul>
@@ -19,3 +17,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default TodoList;

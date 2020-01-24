@@ -4,7 +4,8 @@ import { receiveTodo, removeTodo } from '../../actions/todo_actions';
 import TodoList from './TodoList';
 
 let mapStateToProps = state => ({
-  todos: allTodos(state)
+  todos: allTodos(state),
+  state
 });
 
 let mapDispatchToProps = dispatch => ({

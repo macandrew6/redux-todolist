@@ -21,12 +21,14 @@ button {
 .todo-list {
   border: 1px solid black;
   list-style: none;
+  border-radius: 7px;
 }
 
 .todo-list-item {
   border: 1px solid red;
   padding: 10px;
   margin: 10px;
+  border-radius: 7px;
 }
 
 .todo-form, .todo-list, .step-form, .step-list {
