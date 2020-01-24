@@ -10,6 +10,7 @@ export default class TodoListItem extends Component {
     };
 
     this.toggleDetails = this.toggleDetails.bind(this);
+    this.toggleTodo = this.toggleTodo.bind(this);
   }
 
   toggleDetails() {
@@ -27,14 +28,18 @@ export default class TodoListItem extends Component {
   render() {
     const { todo } = this.props;
     let detail;
+    let showDetails = "todo-list-item";
     if (this.state.detail) {
+      showDetails += " todo-list-item-active"
       detail = <TodoDetailViewContainer todo={todo} />;
     }
+
     return (
       <li 
-        className="todo-list-item">
+        className={showDetails}>
         <h3><a onClick={this.toggleDetails}>{todo.title}</a></h3>
         <button 
+          className={todo.done ? "undone": "done"}
           onClick={this.toggleTodo}>
           { todo.done ? "Undo" : "Done"}
         </button>

@@ -12,6 +12,18 @@ button {
 
 button {
   background-color: pink;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(160, 115, 123);
+}
+
+button:active {
+  background-color: rgb(189, 82, 99);
 }
 
 .app-title {
@@ -25,10 +37,16 @@ button {
 }
 
 .todo-list-item {
+  display: flex;
+  justify-content: space-between;
   border: 1px solid red;
   padding: 10px;
   margin: 10px;
   border-radius: 7px;
+}
+
+.todo-list-item-active {
+  display: block;
 }
 
 .todo-form, .todo-list, .step-form, .step-list {
