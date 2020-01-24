@@ -37,16 +37,15 @@ button:active {
 }
 
 .todo-list-item {
-  display: flex;
-  justify-content: space-between;
   border: 1px solid red;
   padding: 10px;
   margin: 10px;
   border-radius: 7px;
 }
 
-.todo-list-item-active {
-  display: block;
+.todo-list-item-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .todo-form, .todo-list, .step-form, .step-list {
