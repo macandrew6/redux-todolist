@@ -11,7 +11,7 @@ class StepListItem extends Component {
       <div className="step-list-item">
         <div>{step.title}</div>
         <div>{step.description}</div>
-        <button onClick={() => removeStep(step)}>Delete Step</button>
+        <button onClick={(e) => removeStep(step, e)}>Delete Step</button>
       </div>
     );
   }
