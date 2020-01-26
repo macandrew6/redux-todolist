@@ -13,12 +13,11 @@ export const receiveTodo = todo => ({
   todo
 });
 
-export const removeTodo = (todo, e) => {
-  return ({
-    type: REMOVE_TODO,
-    todo
-  });
-};
+export const removeTodo = todo => ({
+  type: REMOVE_TODO,
+  todo
+});
+
 
 export const updateTodo = todo => ({
   type: UPDATE_TODO,
