@@ -22,6 +22,10 @@ button:hover {
   background-color: rgb(160, 115, 123);
 }
 
+button:focus {
+  outline: none;
+}
+
 button:active {
   background-color: rgb(189, 82, 99);
 }
@@ -43,9 +47,10 @@ button:active {
   border-radius: 7px;
 }
 
-.todo-list-item-title {
+.todo-list-item-container {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .todo-form, .todo-list, .step-form, .step-list {
