@@ -45,12 +45,12 @@ button:active {
   padding: 10px;
   margin: 10px;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .todo-list-item-container {
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .todo-form, .todo-list, .step-form, .step-list {

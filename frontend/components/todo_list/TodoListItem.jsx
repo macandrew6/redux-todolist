@@ -19,7 +19,8 @@ export default class TodoListItem extends Component {
     });
   }
 
-  toggleTodo() {
+  toggleTodo(e) {
+    e.stopPropagation();
     const { todo, receiveTodo } = this.props;
     let toggledTodo = Object.assign({}, todo, { done: !todo.done });
     receiveTodo(toggledTodo);
@@ -33,9 +34,11 @@ export default class TodoListItem extends Component {
     }
 
     return (
-      <li className="todo-list-item">
+      <li 
+        onClick={this.toggleDetails}
+        className="todo-list-item">
         <div className="todo-list-item-container">
-          <h3><a onClick={this.toggleDetails}>{todo.title}</a></h3>
+          <h3>{todo.title}</h3>
           <button 
             className={todo.done ? "undone": "done"}
             onClick={this.toggleTodo}>
