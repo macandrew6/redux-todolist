@@ -10,6 +10,10 @@ button {
   border: none;
 }
 
+.app-container {
+  background-color: blueviolet;
+}
+
 button {
   background-color: pink;
   margin: 5px;
