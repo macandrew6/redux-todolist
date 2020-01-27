@@ -12,13 +12,7 @@ class StepForm extends React.Component {
       todoId: this.props.todoId
     };
 
-    this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleKeyUp(e) {
-    console.log(e);
-    e.stopPropagation();
   }
 
   update(field) {
@@ -44,8 +38,7 @@ class StepForm extends React.Component {
     return (
       <form 
         className="step-form"
-        onSubmit={(e) => this.handleSubmit(e)}
-        onKeyUp={this.handleKeyUp}>
+        onSubmit={(e) => this.handleSubmit(e)}>
         <label htmlFor="step-title">Title:</label>
         <input 
           type="text" 

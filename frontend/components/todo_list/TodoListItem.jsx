@@ -13,7 +13,8 @@ export default class TodoListItem extends Component {
     this.toggleTodo = this.toggleTodo.bind(this);
   }
 
-  toggleDetails() {
+  toggleDetails(e) {
+    e.stopPropagation();
     this.setState({
       detail: !this.state.detail
     });
@@ -34,10 +35,10 @@ export default class TodoListItem extends Component {
     }
 
     return (
-      <li 
-        onClick={this.toggleDetails}
-        className="todo-list-item">
-        <div className="todo-list-item-container">
+      <li className="todo-list-item">
+        <div 
+          className="todo-list-item-container"
+          onClick={this.toggleDetails}>
           <h3>{todo.title}</h3>
           <button 
             className={todo.done ? "undone": "done"}
