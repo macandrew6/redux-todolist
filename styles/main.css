@@ -11,7 +11,7 @@ button {
 }
 
 html {
-  background-color: blueviolet;
+  background-color: #764abc;
 }
 
 button {
@@ -45,9 +45,8 @@ button:active {
 }
 
 .todo-list-item {
-  background-color: darkorchid;
+  background-color: #603c9b;
   color: white;
-  border: 1px solid red;
   padding: 10px;
   margin: 10px;
   border-radius: 7px;
