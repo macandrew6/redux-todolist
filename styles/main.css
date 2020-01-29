@@ -15,7 +15,7 @@ html {
 }
 
 button {
-  background-color: pink;
+  background-color: whitesmoke;
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
@@ -23,7 +23,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: rgb(160, 115, 123);
+  background-color: rgb(151, 150, 150);
 }
 
 button:focus {
@@ -39,14 +39,14 @@ button:active {
 }
 
 .todo-list {
-  border: 1px solid black;
+  background-color: #4c2f7a;
   list-style: none;
   border-radius: 7px;
 }
 
 .todo-list-item {
   background-color: #603c9b;
-  color: white;
+  color: rgba(255, 255, 255, 0.815);
   padding: 10px;
   margin: 10px;
   border-radius: 7px;
