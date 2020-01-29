@@ -23,7 +23,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: rgb(151, 150, 150);
+  background-color: rgb(192, 191, 191);
 }
 
 button:focus {
@@ -31,7 +31,8 @@ button:focus {
 }
 
 button:active {
-  background-color: rgb(189, 82, 99);
+  background-color: #4c2f7a;
+  color: white;
 }
 
 .app-title {
