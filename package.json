@@ -2,7 +2,7 @@
   "name": "Todolist-2.0",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "todo_redux.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
