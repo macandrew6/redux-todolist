@@ -5,9 +5,8 @@
   "main": "todo_redux.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch --mode=development",
-    "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
+    "start": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",
