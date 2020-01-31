@@ -53,7 +53,7 @@ class TodoListForm extends React.Component {
           onChange={this.handleChange('body')}  
           required
         />
-        <button type="submit">Add Todo</button>
+        <button className="add-todo-button" type="submit">Add Todo</button>
       </form>
     );
   }

@@ -10,6 +10,16 @@ button {
   border: none;
 }
 
+label {
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+input {
+  padding: 5px;
+}
+
 html {
   background-color: #764abc;
 }
@@ -19,6 +29,10 @@ button {
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
+}
+
+.add-todo-button {
+  margin: 10px;
 }
 
 button:hover {
@@ -37,6 +51,7 @@ button:active {
 
 .app-title {
   text-align: center;
+  color: white;
 }
 
 .todo-list {
@@ -62,8 +77,8 @@ button:active {
 .todo-form, .todo-list, .step-form, .step-list {
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
-  padding: 10px;
+  margin: 0px auto;
+  padding: 5px;
   width: 70%;
 }
 
