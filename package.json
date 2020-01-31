@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "todo_redux.jsx",
+  "homepage" : "http://macandrew6.github.io/redux-todolist",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "webpack -p",
-    "start": "webpack --watch --mode=production && node server.js"
+    "build": "webpack --watch --mode=development",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
