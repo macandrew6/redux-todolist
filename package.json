@@ -5,9 +5,9 @@
   "main": "todo_redux.jsx",
   "homepage" : "http://macandrew6.github.io/redux-todolist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:prod": "NODE_ENV=production webpack -p",
-    "postinstall": "npm run build:prod" 
+    "postinstall": "webpack",
+    "build": "webpack --mode=development",
+    "build:watch": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",
