@@ -83,10 +83,11 @@ button:active {
 }
 
 .step-list-item {
-  border: 1px solid blue;
+  display: flex;
 }
 
 .step-form {
-  border: 2px solid green;
+  padding: 20px;
+  background-color: #764abc;
 }
 
