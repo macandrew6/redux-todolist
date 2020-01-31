@@ -9,8 +9,10 @@ class StepListItem extends Component {
     const { step, removeStep } = this.props;
     return (
       <div className="step-list-item">
-        <div>{step.title}</div>
-        <div>{step.description}</div>
+        <section className="step-list-item-details">
+          <div>{step.title}</div>
+          <div>{step.description}</div>
+        </section>
         <button onClick={(e) => removeStep(step, e)}>Delete Step</button>
       </div>
     );

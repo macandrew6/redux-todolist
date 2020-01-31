@@ -84,6 +84,9 @@ button:active {
 
 .step-list-item {
   display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  background-color: #764abc;
 }
 
 .step-form {
